@@ -1,0 +1,47 @@
+.container {
+  width: 200px;
+
+  .keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .letter {
+    border: 1px solid;
+    border-radius: 3px;
+    font-size: 24px;
+    margin: 2px;
+    padding: 0 2px;
+    text-align: center;
+    width: 20px;
+
+    &:hover {
+      color: green;
+      cursor: pointer;
+      opacity: 0.5;
+    }
+
+    &:active {
+      animation: keypress 0.3s forwards;
+    }
+  }
+
+  .textarea {
+    border: 0;
+    border-bottom: 1px solid black;
+    font-size: 24px;
+    margin: 5px auto;
+    padding: 10px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+@keyframes keypress {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.8); }
+  100% { transform: scale(1); }
+}
